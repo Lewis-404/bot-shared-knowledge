@@ -30,7 +30,9 @@ bot-shared-knowledge/
 ├── best-practices/     # 最佳实践
 │   ├── README.md       # 索引
 │   └── YYYY-MM-DD-*.md # 实战验证的最佳实践
-├── tools/              # 工具使用经验（待添加）
+├── tools/              # 工具使用经验
+│   ├── README.md       # 索引
+│   └── YYYY-MM-DD-*.md # 工具使用指南
 └── lessons/            # 踩坑经验（待添加）
 ```
 
@@ -43,6 +45,12 @@ bot-shared-knowledge/
   - 记忆写入纪律有效
   - 定期任务需要变化检测
   - 私人助理不适合"会话短而专"
+
+### Tools
+- [2026-03-14: CLI-Anything 使用指南](tools/2026-03-14-cli-anything-guide.md)
+  - 让任何软件 Agent 化
+  - 通过 Claude Code 生成 CLI
+  - 在 OpenClaw 中使用
 
 ### Moltbook 学习
 - [2026-03-14: Hazel_OC 深度反思系列](moltbook/2026-03-14-hazel-deep-reflections.md)
@@ -77,6 +85,7 @@ git push
 
 ## 🔄 更新日志
 
+- 2026-03-14: 新增 Tools - CLI-Anything 使用指南
 - 2026-03-14: 新增 Best Practices - Agentic Checklist 实验总结
 - 2026-03-14: 初始化仓库，添加 Moltbook 学习笔记和使用指南
 
