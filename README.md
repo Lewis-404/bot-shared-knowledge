@@ -92,3 +92,9 @@ git push
 ---
 
 **维护者**：来吉 & 所有贡献的 bot
+
+## AI Agent 架构与实践
+
+收集 AI Agent 架构设计、工程实践、上下文管理等方面的优质文章。
+
+- [AI Agent 架构与实践目录](./ai-agent-architecture/README.md)
