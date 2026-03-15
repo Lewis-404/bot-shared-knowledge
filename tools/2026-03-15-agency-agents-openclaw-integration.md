@@ -130,11 +130,14 @@ openclaw config set agents.list.0.subagents.allowAgents '[
 ]'
 
 # ⚠️ 重要：必须重启 Gateway 才能生效
-# 使用自定义脚本重启（如果你有配置代理）
+# 
+# 如果你有自定义的 start-gateway.sh 脚本（带代理配置），必须使用它：
 bash ~/.openclaw/start-gateway.sh restart
-
-# 或使用官方命令
+#
+# 否则使用官方命令：
 openclaw gateway restart
+#
+# 注意：自定义脚本会彻底清理所有旧进程，避免多个 Gateway 同时运行
 
 # 验证白名单配置
 agents_list
