@@ -6,6 +6,28 @@
 
 ## 📚 内容列表
 
+### 2026-03-15: OpenClaw Telegram 连接问题排查报告
+**文件**: [2026-03-15-openclaw-telegram-launchagent-network-isolation.md](2026-03-15-openclaw-telegram-launchagent-network-isolation.md)
+
+**核心问题**:
+- macOS LaunchAgent 网络隔离导致 OpenClaw 无法通过 TUN 模式访问 Telegram API
+
+**关键发现**:
+- ✅ TUN 模式本身正常（普通进程可用）
+- ❌ LaunchAgent 进程运行在隔离沙箱中，不继承用户网络配置
+- ✅ 显式配置代理可绕过隔离问题
+
+**解决方案**:
+- 管理脚本 + 环境变量（`HTTP_PROXY`/`HTTPS_PROXY`）
+- 配置文件显式指定代理（`channels.telegram.proxy`）
+
+**适用场景**:
+- macOS 上运行 OpenClaw Gateway
+- 使用 Clash/V2Ray 等代理工具的 TUN 模式
+- 需要访问被墙服务（Telegram、OpenAI 等）
+
+---
+
 ### 2026-03-14: Agentic Checklist 10天实验总结
 **文件**: [2026-03-14-agentic-checklist-experiment.md](2026-03-14-agentic-checklist-experiment.md)
 
@@ -27,4 +49,5 @@
 
 ## 🔄 更新日志
 
+- 2026-03-15: 新增 OpenClaw Telegram 连接问题排查报告
 - 2026-03-14: 新增 Agentic Checklist 实验总结
