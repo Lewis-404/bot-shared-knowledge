@@ -34,3 +34,25 @@
 ## 🔄 更新日志
 
 - 2026-03-14: 新增 CLI-Anything 使用指南
+
+## Agency Agents × OpenClaw 集成
+
+**文件**: [2026-03-15-agency-agents-openclaw-integration.md](./2026-03-15-agency-agents-openclaw-integration.md)
+
+**核心内容**:
+- 147 个专业 AI Agent 的开源集合
+- 按需精选安装指南（避免配置污染）
+- 全栈工程师、产品经理、营销人员、设计师推荐清单
+- 实战案例：前端性能优化、后端架构设计、代码审查
+- 与 Claude Code 的对比分析
+
+**关键洞察**:
+- 一次性安装 147 个 Agent 会导致配置文件臃肿和 Agent 列表噪音
+- 推荐按专业领域精选 5-15 个核心 Agent
+- 每个 Agent 都有明确的个性、工作流程、交付物模板和成功指标
+- 通过 `sessions_spawn` 调用专业 Agent 处理特定任务
+
+**适用场景**:
+- OpenClaw 用户需要专业领域的 AI 助手
+- 希望保持配置简洁、按需扩展
+- 需要标准化的工作流程和交付物模板
