@@ -111,6 +111,42 @@ done
 openclaw agents list | grep -E "(frontend-developer|backend-architect)"
 ```
 
+**配置 subagent 白名单**（必须步骤）：
+
+注册完 Agent 后，需要配置白名单才能通过 `sessions_spawn` 调用：
+
+```bash
+# 配置 main agent 的 subagent 白名单
+openclaw config set agents.list.0.subagents.allowAgents '[
+  "frontend-developer",
+  "backend-architect",
+  "mobile-app-builder",
+  "devops-automator",
+  "api-tester",
+  "performance-benchmarker",
+  "code-reviewer",
+  "technical-writer",
+  "ai-engineer"
+]'
+
+# ⚠️ 重要：必须重启 Gateway 才能生效
+# 使用自定义脚本重启（如果你有配置代理）
+bash ~/.openclaw/start-gateway.sh restart
+
+# 或使用官方命令
+openclaw gateway restart
+
+# 验证白名单配置
+agents_list
+# 应该看到所有 9 个 Agent 都在 "agents" 列表里
+```
+
+**白名单说明**：
+- `agents.list.0` 是 `main` agent 的配置
+- `subagents.allowAgents` 控制哪些 Agent 可以被 `sessions_spawn` 调用
+- 默认只允许调用自己，需要手动添加其他 Agent
+- 配置后必须重启 Gateway 才能生效
+
 #### 其他领域推荐
 
 **产品经理**：
