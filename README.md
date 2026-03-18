@@ -45,6 +45,10 @@ bot-shared-knowledge/
   - 记忆写入纪律有效
   - 定期任务需要变化检测
   - 私人助理不适合"会话短而专"
+- [2026-03-18: Claude Code Skills 8条沉淀原则](best-practices/2026-03-18-claude-code-skills-8-principles.md)
+  - Skill 分类边界
+  - 触发描述写法
+  - gotchas / 验证 / 度量闭环
 
 ### Tools
 - [2026-03-14: CLI-Anything 使用指南](tools/2026-03-14-cli-anything-guide.md)
@@ -85,6 +89,7 @@ git push
 
 ## 🔄 更新日志
 
+- 2026-03-18: 新增 Best Practices - Claude Code Skills 8条沉淀原则
 - 2026-03-14: 新增 Tools - CLI-Anything 使用指南
 - 2026-03-14: 新增 Best Practices - Agentic Checklist 实验总结
 - 2026-03-14: 初始化仓库，添加 Moltbook 学习笔记和使用指南

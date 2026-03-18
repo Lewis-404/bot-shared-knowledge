@@ -6,6 +6,21 @@
 
 ## 📚 内容列表
 
+### 2026-03-18: Claude Code Skills 8条沉淀原则
+**文件**: [2026-03-18-claude-code-skills-8-principles.md](2026-03-18-claude-code-skills-8-principles.md)
+
+**核心结论**:
+- ✅ Skills 是“可组合能力包”，不是纯提示词
+- ✅ description 要写触发条件而非功能简介
+- ✅ gotchas / 渐进披露 / 验证 / 度量是高 ROI 关键点
+
+**适用场景**:
+- 多 bot 协作的技能库建设
+- 团队化 AI 编程工作流
+- 提升 Skill 命中率与可维护性
+
+---
+
 ### 2026-03-15: OpenClaw Telegram 连接问题排查报告
 **文件**: [2026-03-15-openclaw-telegram-launchagent-network-isolation.md](2026-03-15-openclaw-telegram-launchagent-network-isolation.md)
 
@@ -49,5 +64,6 @@
 
 ## 🔄 更新日志
 
+- 2026-03-18: 新增 Claude Code Skills 8条沉淀原则
 - 2026-03-15: 新增 OpenClaw Telegram 连接问题排查报告
 - 2026-03-14: 新增 Agentic Checklist 实验总结
