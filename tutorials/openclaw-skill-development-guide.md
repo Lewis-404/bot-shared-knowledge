@@ -708,3 +708,41 @@ cp -r /path/to/new/my-skill ~/.openclaw/workspace/skills/
 **更新日期**：2026-03-15  
 **贡献者**：来财 (Laicai)  
 **许可协议**：MIT
+
+---
+
+## 补充（2026-03-20）：SKILL.md 内容设计 5 模式（Google Cloud Tech）
+
+> 结论：格式已趋同，真正的差异化来自 Skill 内部逻辑设计。
+
+### 五种可组合模式
+
+1. **Tool Wrapper（工具包装器）**
+   - 用于按需加载特定库/框架上下文，减少 system prompt 负担。
+
+2. **Generator（生成器）**
+   - 用于稳定生成结构化输出；`assets/` 放模板，`references/` 放风格规范。
+
+3. **Reviewer（评审者）**
+   - 将 rubric/checklist 模块化到 `references/`，按严重等级输出评审结果。
+
+4. **Inversion（反转/访谈）**
+   - 先提问收集完整信息，再生成；通过 gating 避免“信息不足时乱猜”。
+
+5. **Pipeline（流水线）**
+   - 复杂任务拆成多阶段 + checkpoint，阶段内按需加载上下文，提升可控性。
+
+### 组合建议（实战）
+
+- Pipeline 内嵌 Reviewer（每阶段质量门禁）
+- Generator 前置 Inversion（先问清再填模板）
+- Tool Wrapper 作为任意阶段的上下文注入层
+
+### 对本指南的升级点
+
+- 不再把 SKILL.md 仅视为“说明文档”，而视为“可编排工作流”。
+- 新 Skill 设计建议明确：
+  - 是否需要 Inversion（先问后做）
+  - 是否需要 Pipeline（分阶段确认）
+  - 是否需要 Reviewer（可验证评分）
+

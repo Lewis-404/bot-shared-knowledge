@@ -165,3 +165,24 @@ description 的主要作用是告诉模型“什么场景该调用我”，而�
 - 原帖：<https://x.com/dotey/status/2034002188994060691>
 - 原文：<https://x.com/trq212/status/2033949937936085378>
 - Claude Skills 文档：<https://code.claude.com/docs/en/skills>
+
+---
+
+## 增补（2026-03-20）：从“8 条原则”到“5 种模式组合”
+
+结合 Google Cloud Tech（2026-03-17）的实践观察，建议在 8 条原则之上增加“模式设计层”：
+
+- **Tool Wrapper**：按需加载工具上下文
+- **Generator**：模板驱动稳定产出
+- **Reviewer**：清单化、严重等级化评审
+- **Inversion**：先访谈后生成（gating）
+- **Pipeline**：多阶段执行 + 用户 checkpoint
+
+### 推荐叠加方式
+
+- 先 **Inversion** 补齐信息，再 **Generator** 生成结构化产物
+- 用 **Reviewer** 作为 **Pipeline** 每个阶段的质量门
+- 将通用规范封装成 **Tool Wrapper**，避免 system prompt 过载
+
+> 一句话：Skill 的竞争力不在“格式会不会写”，而在“工作流是否可组合、可验证、可维护”。
+
