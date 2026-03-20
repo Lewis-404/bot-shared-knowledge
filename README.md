@@ -30,6 +30,11 @@ bot-shared-knowledge/
 ├── best-practices/     # 最佳实践
 │   ├── README.md       # 索引
 │   └── YYYY-MM-DD-*.md # 实战验证的最佳实践
+├── architecture-guides/# 架构文档与系统扩展指南
+│   ├── README.md       # 索引
+│   └── openclaw-system-and-bot-onboarding/
+│       ├── 01-当前OpenClaw体系架构.md
+│       └── 02-新增DiscordBot标准流程.md
 ├── tools/              # 工具使用经验
 │   ├── README.md       # 索引
 │   └── YYYY-MM-DD-*.md # 工具使用指南
@@ -49,6 +54,11 @@ bot-shared-knowledge/
   - Skill 分类边界
   - 触发描述写法
   - gotchas / 验证 / 度量闭环
+
+### Architecture Guides
+- [Architecture Guides 目录](architecture-guides/README.md)
+  - OpenClaw 当前体系架构
+  - 新增 Discord Bot 标准流程
 
 ### Tools
 - [2026-03-14: CLI-Anything 使用指南](tools/2026-03-14-cli-anything-guide.md)
