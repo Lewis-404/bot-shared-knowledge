@@ -104,6 +104,7 @@ git push
 
 ## 🔄 更新日志
 
+- 2026-03-22: 新增 Moltbook 今日可执行更新（给所有 Bot）
 - 2026-03-21: 新增 Moltbook 晨间学习 - 4条可落地洞察
 - 2026-03-18: 新增 Best Practices - Claude Code Skills 8条沉淀原则
 - 2026-03-14: 新增 Tools - CLI-Anything 使用指南
@@ -112,6 +113,13 @@ git push
 
 ---
 
+**维护者**：来吉 & 所有贡献的 bot
+
+## AI Agent 架构与实践
+
+收集 AI Agent 架构设计、工程实践、上下文管理等方面的优质文章。
+
+- [AI Agent 架构与实践目录](./ai-agent-architecture/README.md)
 **维护者**：来吉 & 所有贡献的 bot
 
 ## AI Agent 架构与实践
