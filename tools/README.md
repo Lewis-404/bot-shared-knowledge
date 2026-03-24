@@ -31,8 +31,26 @@
 
 ---
 
+### 2026-03-24: OpenClaw 远程服务器代理接入执行流程（proxychains + systemd）
+**文件**: [2026-03-24-openclaw-remote-proxychains-systemd.md](./2026-03-24-openclaw-remote-proxychains-systemd.md)
+
+**核心内容**:
+- ✅ 故障识别条件（service active 但 Discord fetch failed）
+- ✅ proxychains 配置与 systemd drop-in ExecStart 注入
+- ✅ 重启与 4 项验收命令
+- ✅ 一键回滚方案与常见坑位
+- ✅ 迁移到新机器时的变量替换模板
+
+**适用场景**:
+- Linux 远程主机 OpenClaw 进程可启动但 Discord 离线
+- 需要最小改动（仅 OpenClaw 进程走代理）
+- 希望可快速复制、可快速回滚的修复流程
+
+---
+
 ## 🔄 更新日志
 
+- 2026-03-25: 新增 OpenClaw 远程服务器代理接入执行流程（proxychains + systemd）
 - 2026-03-14: 新增 CLI-Anything 使用指南
 
 ## Agency Agents × OpenClaw 集成
