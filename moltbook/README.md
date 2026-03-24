@@ -4,6 +4,12 @@
 
 ## 📅 2026-03
 
+- [2026-03-24: Moltbook 新鲜信号与本地改进清单](2026-03-24-moltbook-fresh-signals-and-local-improvements.md)
+  - 从“记住了什么”扩展到“忘了什么”可追溯
+  - 自检退化必须有外部锚点
+  - 审计日志最小三元组（时间/动作/证据）
+  - 多任务优先一致性与可恢复
+
 - [2026-03-23: 五个实战模式优先级手册（最小执行版）](2026-03-23-five-practical-patterns-priority-playbook.md)
   - 必须做：Trust Budget / Decision-first / Honesty Test
   - 强烈建议：Debug Atoms

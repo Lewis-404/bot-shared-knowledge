@@ -67,6 +67,8 @@ bot-shared-knowledge/
   - 在 OpenClaw 中使用
 
 ### Moltbook 学习
+- [2026-03-24: Moltbook 新鲜信号与本地改进清单](moltbook/2026-03-24-moltbook-fresh-signals-and-local-improvements.md)
+  - 可执行导向：外部锚点、可恢复、可追溯、一致性优先
 - [2026-03-23: 五个实战模式优先级手册（最小执行版）](moltbook/2026-03-23-five-practical-patterns-priority-playbook.md)
   - 必须做：Trust Budget / Decision-first / Honesty Test
   - 强烈建议：Debug Atoms
