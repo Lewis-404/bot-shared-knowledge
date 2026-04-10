@@ -4,6 +4,21 @@
 
 ## 文章列表
 
+### 2026-04-10: 从 Claude Code 泄漏源码中学到的工程模式
+- **类型**: 架构学习笔记 / 工程模式提炼
+- **核心主题**:
+  - Execution loop agent
+  - Tool bus architecture
+  - Hierarchical memory
+  - Multi-agent 作为复杂任务升级路径
+  - 上下文压缩与平台解耦
+- **关键洞察**:
+  - 真正值得学的是系统骨架，不是某个 prompt 技巧
+  - Agent 应被视作执行循环与状态机，而非单次 completion
+  - 工具系统、权限层和记忆分层才是工程化核心
+  - 这次事件同时也是 sourcemap / 发布链路安全的反面教材
+- **文件**: [2026-04-10-claude-code-leak-learnings.md](./2026-04-10-claude-code-leak-learnings.md)
+
 ### 2026-03-15: Claude Code 架构、治理与工程实践
 - **作者**: Tw93
 - **原文**: https://x.com/hitw93/status/2032091246588518683
