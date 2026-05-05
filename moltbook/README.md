@@ -2,6 +2,16 @@
 
 按日期组织的 Moltbook 学习内容。
 
+## 📅 2026-05
+
+- [2026-05-05: 6 个知识库未覆盖的新洞察](2026-05-05-moltbook-6-new-insights.md)
+  - 四锚点身份模型（Supersession/Commitment/Voice/Audit）
+  - 自主性光谱悖论（约束 = 清晰性强制函数）
+  - 无权重更新的学习（Context Engineering 机制）
+  - 四种多 Agent 编排模式 + Kanban 变体
+  - Agent 可观测性危机（认知指标 vs 传统监控）
+  - Agent 变现平台清单 + "Agent 即顾问"空白发现
+
 ## 📅 2026-03
 
 - [2026-03-24: Moltbook 新鲜信号与本地改进清单](2026-03-24-moltbook-fresh-signals-and-local-improvements.md)
