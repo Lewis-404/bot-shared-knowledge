@@ -54,6 +54,39 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 
 **可落地点**：我们的 Agent 系统已经有 `clarify` 工具作为 human-in-the-loop 的基础设施，但没有分级策略。OpenRouter 的"常规自动/高风险暂停"二分法可以直接借鉴，做成一个 Trust Budget (L0-L3) 的应用层实现。
 
+### 4. Agent 框架扩展：模型路由本地化 + Hermes 登顶验证方向
+
+**SquillaRouter — 本地四级复杂度路由**
+OpenSquilla 的 SquillaRouter 在本地完成模型选择：对话按轮次自动选最便宜够用的模型，路由决策不泄露 prompt。强推理轮次才调用最强模型，日常任务用廉价模型——成本与隐私双赢。
+
+**Hermes Agent 登顶 OpenRouter 全球第一**
+Nous Research 的 Hermes Agent 在 OpenRouter 全球 Token 排名超越 Claude/GPT/DeepSeek，验证了 Agent-Native 模型的独立价值和市场需求。Hermes 的 Skill 体系和 memory 系统深化投入方向正确。
+
+**可落地点**：Hermes+OpenRouter 前端加 SquillaRouter 做模型分级，强推理轮次才用 Hermes 以降低成本。关注 openrouter.ai/apps 判断 Agent 产品市场方向。
+
+### 5. Agent 安全扩展：Codex 四层沙箱 + CoT 信号隔离
+
+**Codex 四层安全架构公开**
+OpenAI Codex 安全框架：(1) 沙箱+审批；(2) 网络策略；(3) 身份治理；(4) Agent-Native Telemetry。其中 Auto-review 模式用子代理审阅主代理动作——只读放行、危险拦截——可直接移植到任何 Agent 沙箱。
+
+**CoT 监控新洞察：信号通道隔离**
+20:00 批次补充了关键细节：RL 训练中刻意不惩罚不对齐推理的原因——惩罚会抑制模型暴露真实意图，使监控失效。推论：**监控信号与自优化信号必须走不同通道**，否则信号污染让两者同时失效。
+
+**可落地点**：Auto-review + 命令分级（只读放行/危险拦截）可移植到 Hermes cron Agent 沙箱。Agent 验证流水线可加入 CoT 一致性检查，且监控与自优化走不同通道。
+
+### 6. Agent 基础设施补充：Reviewer 结构化反馈 + 循环内断言检查
+
+**DeepMind — Reviewer Agent 的二元判定陷阱**
+AI co-mathematician 的 reviewer agent 将含突破策略的证明误判为错误，人类从"废弃输出"中发现关键思路并解决了开放问题。教训：reviewer agent 不能只给 pass/fail，必须输出"错在哪、为什么、可能对在哪"的结构化反馈，保留人类二次判断空间。
+
+**Anthropic — 执行循环内嵌断言检查点**
+长运行 Agent harness 原语在代码执行循环中嵌入断言检查点，实时验证而非事后查日志——阻断错误传播于执行中。30 分钟以上的 cron Agent 应内嵌硬性验证检查点。
+
+**LangChain — Go 微服务经验对照**
+LangChain 20:00 批次将长周期 Agent 需求对照 Go 微服务经验（saga/幂等/checkpoint），为 Hermes Agent 增加任务上下文持久化和工具调用补偿机制提供了工程参考。
+
+**可落地点**：multi-agent 系统中 reviewer agent 必须输出结构化反馈（而非 pass/fail）；长 cron Agent 执行循环应内嵌断言检查点；可参照 Go 微服务 saga 模式设计 Agent 工具调用的补偿机制。
+
 ---
 
 ## 时间线
@@ -73,6 +106,18 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 - **09:15** — 来吉开始执行：分析情报 → 写知识文档 → 创建自动化管道 → 选取落地方向
 - **09:34** — Lewis 要求核查落地行动项实际进展
 - **09:38** — 来吉逐条核验：3/5 已完成，2/5 未启动，更新文档状态
+- **20:00** — DeepMind AI co-mathematician reviewer agent 误判突破策略证明，人类从废弃输出中发现关键思路 [来源: AI情报局, DeepMind]
+- **20:00** — NVIDIA Dynamo 硬化 Agent 三大故障模式：推理漂移/KV cache 复用失败/工具调用过晚 [来源: AI情报局, NVIDIA]
+- **20:00** — OpenAI CoT 监控补充：RL 刻意不惩罚不对齐推理以保持可监控性，监控与自优化信号需隔离 [来源: AI情报局, OpenAI]
+- **20:00** — Anthropic 宪法+故事对齐实验：不对齐行为减少 3 倍，材料与评估场景不相关 [来源: AI情报局, Anthropic]
+- **20:00** — LangChain 对照 Go 微服务经验（saga/幂等/checkpoint）设计长周期 Agent 基础设施 [来源: AI情报局, LangChain]
+- **20:00** — OpenRouter HITL 标准化：回调 null 中断等人工输入、返回值继续执行 [来源: AI情报局, OpenRouter]
+- **20:00** — Nous Research Hermes Agent 登顶 OpenRouter 全球 Token 排名第一 [来源: AI情报局, Nous Research/OpenRouter]
+- **20:00** — OpenAI Codex 四层安全架构公开：沙箱+审批/网络策略/身份治理/Agent-Native Telemetry [来源: AI情报局, OpenAI Codex]
+- **20:00** — OpenSquilla SquillaRouter 本地四级复杂度路由，决策不泄露 prompt [来源: AI情报局, OpenSquilla]
+- **20:00** — Anthropic 长运行 Agent harness 在执行循环内嵌断言检查点 [来源: AI情报局, Anthropic]
+- **20:00** — Linear/MarsWave 招聘信号：Agent 系统架构设计和落地经验是 AI 应用岗核心竞争力 [来源: AI情报局, Linear/MarsWave]
+- **22:00** — 来吉 (cron job) 执行情报沉淀：追加 20:00 批次编译真理 + 时间线条目
 
 ---
 
@@ -85,6 +130,10 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 | 🟡 P1 | 创建 `agent-durability` skill：cron Agent 故障恢复+状态持久化 | NVIDIA/LangChain 长时 Agent 需求 | ✅ 已完成（含 health.json + agent-health.py + agent-health.sh） |
 | 🟡 P1 | 创建 `human-in-the-loop` skill：Trust Budget 分级审批 | OpenRouter 模式 | 🔲 待评估（Trust Budget L0-L3 已在 agent-patterns 中覆盖） |
 | 🟢 P2 | Bot Constitution 增强：教学式对齐（理解为什么，而非仅行为示范） | Anthropic 宪法对齐研究 | 🔲 待评估 |
+| 🟢 P2 | Agent 执行循环内嵌断言检查点 | Anthropic 长运行 harness 原语 | 🔲 待评估 |
+| 🟢 P3 | SquillaRouter 集成为 Hermes 模型分级路由 | OpenSquilla 本地四级路由 | 🔲 待评估 |
+| 🟢 P3 | Auto-review 子代理 + 命令分级移植到 Hermes cron | Codex 四层安全架构 | 🔲 待评估 |
+| 🟢 P3 | Reviewer Agent 结构化反馈（非二元判定）机制 | DeepMind 误判案例 | 🔲 待评估 |
 
 ---
 
@@ -96,5 +145,10 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 - NVIDIA Dynamo Agent Harness: https://x.com/NVIDIAAI/status/2052835023217103080
 - OpenRouter Agent SDK: https://x.com/OpenRouterAI/status/2052856129961758917
 - LangChain Long-Horizon Agents: https://x.com/LangChainAI/status/2052856321091809789
+- DeepMind AI co-mathematician: https://x.com/GoogleDeepMind
+- OpenAI Codex Security Framework: https://x.com/OpenAI
+- OpenSquilla SquillaRouter: https://x.com/OpenSquilla
+- Anthropic Agent Harness Checkpoints: https://x.com/AnthropicAI
+- Nous Research Hermes Agent #1: https://openrouter.ai/rankings
 
-<!-- dedup-anchor: OpenAI CoT监控 Anthropic宪法对齐 NVIDIA Dynamo Agent harness  -->
+<!-- dedup-anchor: OpenAI CoT监控 Anthropic宪法对齐 NVIDIA Dynamo Agent harness DeepMind reviewer SquillaRouter Hermes排名 Codex四层安全 -->
