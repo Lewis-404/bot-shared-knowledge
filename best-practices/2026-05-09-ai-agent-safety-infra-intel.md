@@ -71,6 +71,8 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 ### 2026-05-09
 - **09:03** — Lewis 指出来吉的两个问题：1) 情报收集后没总结到 GitHub；2) 情报没落地成能力
 - **09:15** — 来吉开始执行：分析情报 → 写知识文档 → 创建自动化管道 → 选取落地方向
+- **09:34** — Lewis 要求核查落地行动项实际进展
+- **09:38** — 来吉逐条核验：3/5 已完成，2/5 未启动，更新文档状态
 
 ---
 
@@ -78,10 +80,10 @@ OpenAI 和 Anthropic 在同一天发布了 Agent 安全研究成果，方向不�
 
 | 优先级 | 行动 | 对应情报 | 状态 |
 |--------|------|---------|------|
-| 🔴 P0 | 创建 `ai-intel-pipeline` skill：情报→知识→GitHub 自动化 | 本次整改 | ✅ 进行中 |
-| 🔴 P0 | 修改 AI情报局 cron：增加结构化 intel 保存 | 情报存储缺失 | 🔲 待执行 |
-| 🟡 P1 | 创建 `agent-durability` skill：cron Agent 故障恢复+状态持久化 | NVIDIA/LangChain 长时 Agent 需求 | 🔲 待评估 |
-| 🟡 P1 | 创建 `human-in-the-loop` skill：Trust Budget 分级审批 | OpenRouter 模式 | 🔲 待评估 |
+| 🔴 P0 | 创建 `ai-intel-pipeline` skill：情报→知识→GitHub 自动化 | 本次整改 | ✅ 已完成（三级 cron 管道替代：采集→沉淀→落地） |
+| 🔴 P0 | 修改 AI情报局 cron：增加结构化 intel 保存 | 情报存储缺失 | ✅ 已完成 |
+| 🟡 P1 | 创建 `agent-durability` skill：cron Agent 故障恢复+状态持久化 | NVIDIA/LangChain 长时 Agent 需求 | ✅ 已完成（含 health.json + agent-health.py + agent-health.sh） |
+| 🟡 P1 | 创建 `human-in-the-loop` skill：Trust Budget 分级审批 | OpenRouter 模式 | 🔲 待评估（Trust Budget L0-L3 已在 agent-patterns 中覆盖） |
 | 🟢 P2 | Bot Constitution 增强：教学式对齐（理解为什么，而非仅行为示范） | Anthropic 宪法对齐研究 | 🔲 待评估 |
 
 ---
