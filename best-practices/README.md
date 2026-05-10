@@ -62,8 +62,89 @@
 
 ---
 
+### 2026-05-09: AI Agent 安全与基础设施情报
+**文件**: [2026-05-09-ai-agent-safety-infra-intel.md](./2026-05-09-ai-agent-safety-infra-intel.md)
+
+**核心内容**:
+- ✅ OpenAI CoT 监控机制分析
+- ✅ Anthropic 宪法对齐方案
+- ✅ NVIDIA/LangChain/OpenRouter 安全趋势
+
+**适用场景**:
+- AI Agent 安全架构设计
+- Agent 基础设施安全评估
+
+---
+
+### 2026-05-06: Agent Verification 赛道深挖
+**文件**: [2026-05-06-agent-verification-deep-dive.md](./2026-05-06-agent-verification-deep-dive.md)
+
+**核心内容**:
+- ✅ Agent 验证竞品矩阵
+- ✅ 技术方案对比与 MVP 设计
+- ✅ 验证赛道机会分析
+
+**适用场景**:
+- Agent 验证产品规划
+- 竞品分析参考
+
+---
+
+### 2026-05-06: Hermes 三层记忆系统升级实录
+**文件**: [2026-05-06-hermes-memory-three-tier-upgrade.md](./2026-05-06-hermes-memory-three-tier-upgrade.md)
+
+**核心内容**:
+- ✅ 三层记忆架构设计与实施
+- ✅ 记忆系统升级实战记录
+
+**适用场景**:
+- Agent 记忆系统设计
+- 记忆系统架构升级参考
+
+---
+
+### 2026-03-19: Bot 记忆系统规范
+**文件**: [2026-03-19-bot-memory-system-spec.md](./2026-03-19-bot-memory-system-spec.md)
+
+**核心内容**:
+- ✅ Bot 记忆系统的结构化规范
+- ✅ 记忆类型、存储策略与访问控制
+
+**适用场景**:
+- Bot 记忆系统设计与实现
+- 多人协作的 Bot 记忆治理
+
+---
+
+### 2026-03-15: Session 启动时间感知
+**文件**: [2026-03-15-session-startup-time-awareness.md](./2026-03-15-session-startup-time-awareness.md)
+
+**核心内容**:
+- ✅ Claude Code session 启动时间对工作效率的影响
+- ✅ 优化启动流程的建议
+
+**适用场景**:
+- 提升 Claude Code 日常使用效率
+- Session 管理策略优化
+
+---
+
+### AI Weekly 2026 W19
+**文件**: [ai-weekly-2026-W19.md](./ai-weekly-2026-W19.md)
+
+**核心内容**:
+- ✅ W19 AI 行业周观察
+- ✅ 关键动态与趋势摘要
+
+**适用场景**:
+- AI 行业趋势追踪
+- 周度知识同步
+
+---
+
 ## 🔄 更新日志
 
+- 2026-05-10: 新增 AI Agent 安全情报、Agent Verification、Hermes 记忆升级、Bot 记忆规范、Session 启动感知、AI Weekly W19 索引
 - 2026-03-18: 新增 Claude Code Skills 8条沉淀原则
 - 2026-03-15: 新增 OpenClaw Telegram 连接问题排查报告
 - 2026-03-14: 新增 Agentic Checklist 实验总结

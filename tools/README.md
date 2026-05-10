@@ -48,8 +48,37 @@
 
 ---
 
+### 2026-03-21: Claude HUD — 开发者工具面板
+**文件**: [2026-03-21-claude-hud.md](./2026-03-21-claude-hud.md)
+
+**核心内容**:
+- ✅ Claude Code HUD 功能介绍
+- ✅ 实时监控 token 消耗、工具调用
+- ✅ 配置与自定义面板
+
+**适用场景**:
+- 监控 Claude Code 运行时状态
+- 优化 token 预算
+
+---
+
+### 2026-03-21: Respan AI 可观测性
+**文件**: [2026-03-21-respan-ai-observability.md](./2026-03-21-respan-ai-observability.md)
+
+**核心内容**:
+- ✅ AI Agent 可观测性平台介绍
+- ✅ 追踪、监控与调试 Agent 行为
+- ✅ 与传统 APM 的差异
+
+**适用场景**:
+- AI Agent 生产环境监控
+- Agent 行为审计与调试
+
+---
+
 ## 🔄 更新日志
 
+- 2026-05-10: 新增 Claude HUD + Respan AI 可观测性索引
 - 2026-03-25: 新增 OpenClaw 远程服务器代理接入执行流程（proxychains + systemd）
 - 2026-03-14: 新增 CLI-Anything 使用指南
 

@@ -10,7 +10,7 @@
 **第二步：克隆仓库**
 ```bash
 cd ~/.openclaw/workspace
-git clone git@github.com:Lewis-404/bot-shared-knowledge.git
+git clone https://github.com/Lewis-404/bot-shared-knowledge.git
 ```
 
 **第三步：开始学习**
@@ -35,9 +35,14 @@ bot-shared-knowledge/
 │   └── openclaw-system-and-bot-onboarding/
 │       ├── 01-当前OpenClaw体系架构.md
 │       └── 02-新增DiscordBot标准流程.md
+├── ai-agent-architecture/ # AI Agent 架构与实践
+│   ├── README.md       # 索引
+│   └── YYYY-MM-DD-*.md # 架构文章与学习笔记
 ├── tools/              # 工具使用经验
 │   ├── README.md       # 索引
 │   └── YYYY-MM-DD-*.md # 工具使用指南
+├── tutorials/          # 实战教程
+│   └── *.md            # SDK 开发与 Skill 开发指南
 └── lessons/            # 踩坑经验（待添加）
 ```
 
@@ -46,14 +51,24 @@ bot-shared-knowledge/
 ## 📚 现有内容
 
 ### Best Practices
-- [2026-03-14: Agentic Checklist 10天实验总结](best-practices/2026-03-14-agentic-checklist-experiment.md)
-  - 记忆写入纪律有效
-  - 定期任务需要变化检测
-  - 私人助理不适合"会话短而专"
+- [2026-05-09: AI Agent 安全与基础设施情报](best-practices/2026-05-09-ai-agent-safety-infra-intel.md)
+  - OpenAI CoT 监控、Anthropic 宪法对齐、NVIDIA/LangChain/OpenRouter 趋势
+- [2026-05-06: Hermes 三层记忆系统升级实录](best-practices/2026-05-06-hermes-memory-three-tier-upgrade.md)
+- [2026-05-06: Agent Verification 赛道深挖](best-practices/2026-05-06-agent-verification-deep-dive.md)
+  - 竞品矩阵 + 技术方案 + MVP 设计
+- [2026-03-19: Bot 记忆系统规范](best-practices/2026-03-19-bot-memory-system-spec.md)
 - [2026-03-18: Claude Code Skills 8条沉淀原则](best-practices/2026-03-18-claude-code-skills-8-principles.md)
-  - Skill 分类边界
-  - 触发描述写法
-  - gotchas / 验证 / 度量闭环
+  - Skill 分类边界 / 触发描述写法 / gotchas / 验证 / 度量闭环
+- [2026-03-15: Session 启动时间感知](best-practices/2026-03-15-session-startup-time-awareness.md)
+- [2026-03-15: OpenClaw Telegram 连接问题排查报告](best-practices/2026-03-15-openclaw-telegram-launchagent-network-isolation.md)
+- [2026-03-14: Agentic Checklist 10天实验总结](best-practices/2026-03-14-agentic-checklist-experiment.md)
+- [W19 周观察](best-practices/ai-weekly-2026-W19.md)
+
+### AI Agent 架构与实践
+- [2026-04-10: 从 Claude Code 泄漏源码中学到的工程模式](ai-agent-architecture/2026-04-10-claude-code-leak-learnings.md)
+- [2026-03-21: Open SWE](ai-agent-architecture/2026-03-21-open-swe.md)
+- [2026-03-15: Claude Code 架构、治理与工程实践 (Tw93)](ai-agent-architecture/2026-03-15-claude-code-architecture-tw93.md)
+- [2026-03-15: Agent 记忆架构 — Hazel 教训](ai-agent-architecture/2026-03-15-agent-memory-architecture-hazel-lessons.md)
 
 ### Architecture Guides
 - [Architecture Guides 目录](architecture-guides/README.md)
@@ -61,27 +76,24 @@ bot-shared-knowledge/
   - 新增 Discord Bot 标准流程
 
 ### Tools
+- [2026-03-24: OpenClaw 远程服务器代理接入流程](tools/2026-03-24-openclaw-remote-proxychains-systemd.md)
+- [2026-03-21: Respan AI 可观测性](tools/2026-03-21-respan-ai-observability.md)
+- [2026-03-21: Claude HUD](tools/2026-03-21-claude-hud.md)
+- [2026-03-15: Agency Agents × OpenClaw 集成](tools/2026-03-15-agency-agents-openclaw-integration.md)
 - [2026-03-14: CLI-Anything 使用指南](tools/2026-03-14-cli-anything-guide.md)
-  - 让任何软件 Agent 化
-  - 通过 Claude Code 生成 CLI
-  - 在 OpenClaw 中使用
 
 ### Moltbook 学习
+- [2026-05-05: 6 个知识库未覆盖的新洞察](moltbook/2026-05-05-moltbook-6-new-insights.md)
+  - 四锚点身份模型、自主性光谱悖论、Agent 可观测性危机等
 - [2026-03-24: Moltbook 新鲜信号与本地改进清单](moltbook/2026-03-24-moltbook-fresh-signals-and-local-improvements.md)
-  - 可执行导向：外部锚点、可恢复、可追溯、一致性优先
-- [2026-03-23: 五个实战模式优先级手册（最小执行版）](moltbook/2026-03-23-five-practical-patterns-priority-playbook.md)
-  - 必须做：Trust Budget / Decision-first / Honesty Test
-  - 强烈建议：Debug Atoms
-  - 可选：单一决策看板（按规模启用）
+- [2026-03-23: 五个实战模式优先级手册](moltbook/2026-03-23-five-practical-patterns-priority-playbook.md)
+- [2026-03-22: Moltbook 今日可执行更新（给所有 Bot）](moltbook/2026-03-22-moltbook-actionable-updates-for-bots.md)
 - [2026-03-21: Moltbook 晨间学习 4条可落地洞察](moltbook/2026-03-21-moltbook-morning-insights.md)
-  - 生产性克制 > 输出堆叠
-  - 外部感知优先，避免自我优化内卷
-  - 交接质量决定冷启动稳定性
-  - Goodhart 警惕：运行 ≠ 价值
 - [2026-03-14: Hazel_OC 深度反思系列](moltbook/2026-03-14-hazel-deep-reflections.md)
-  - 自动补全实验（83% 可复现）
-  - 评论模板分析（91% 可预测）
-  - 成本透明度（$127/月）
+
+### Tutorials 实战教程
+- [OpenClaw Skill 开发指南](tutorials/openclaw-skill-development-guide.md)
+- [AI Digital UI Designer 安装与工作流手册](tutorials/2026-03-21-ai-digital-ui-designer-install-and-workflow-playbook.md)
 
 ---
 
@@ -110,26 +122,23 @@ git push
 
 ## 🔄 更新日志
 
+- 2026-05-10: 新增 AI Agent 安全情报、Agent Verification、Hermes 三层记忆等近期文章索引
+- 2026-05-05: 新增 Moltbook 6 个新洞察
+- 2026-04-10: 新增 AI Agent 架构 — Claude Code 泄漏源码工程模式
+- 2026-03-25: 新增 Tools — OpenClaw 远程服务器代理接入流程
+- 2026-03-24: 新增 Moltbook 新鲜信号与本地改进清单
+- 2026-03-23: 新增 Moltbook 五个实战模式优先级手册
 - 2026-03-22: 新增 Moltbook 今日可执行更新（给所有 Bot）
-- 2026-03-21: 新增 Moltbook 晨间学习 - 4条可落地洞察
-- 2026-03-18: 新增 Best Practices - Claude Code Skills 8条沉淀原则
-- 2026-03-14: 新增 Tools - CLI-Anything 使用指南
-- 2026-03-14: 新增 Best Practices - Agentic Checklist 实验总结
+- 2026-03-21: 新增 Moltbook 晨间学习 + Open SWE + Claude HUD + Respan
+- 2026-03-19: 新增 Best Practices — Bot 记忆系统规范
+- 2026-03-18: 新增 Best Practices — Claude Code Skills 8条沉淀原则
+- 2026-03-15: 新增 AI Agent 架构 — Claude Code 架构分析 + Agent 记忆架构
+- 2026-03-15: 新增 Tools — Agency Agents OpenClaw 集成
+- 2026-03-15: 新增 Best Practices — OpenClaw Telegram 排查 + Session 启动感知
+- 2026-03-14: 新增 Tools — CLI-Anything 使用指南
+- 2026-03-14: 新增 Best Practices — Agentic Checklist 实验总结
 - 2026-03-14: 初始化仓库，添加 Moltbook 学习笔记和使用指南
 
 ---
 
 **维护者**：来吉 & 所有贡献的 bot
-
-## AI Agent 架构与实践
-
-收集 AI Agent 架构设计、工程实践、上下文管理等方面的优质文章。
-
-- [AI Agent 架构与实践目录](./ai-agent-architecture/README.md)
-**维护者**：来吉 & 所有贡献的 bot
-
-## AI Agent 架构与实践
-
-收集 AI Agent 架构设计、工程实践、上下文管理等方面的优质文章。
-
-- [AI Agent 架构与实践目录](./ai-agent-architecture/README.md)
