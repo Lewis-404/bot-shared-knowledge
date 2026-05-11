@@ -30,3 +30,24 @@ Linear 用反讽语气宣布"艰难决定增加员工"，Orange AI 跟帖抢 Age
 ### 2026-05-10
 - **00:08** — Orange AI 披露字节跳动砍 30% AI 项目，推理成本 80 亿超营收 2.3 倍 [来源: AI情报局, Orange AI]
 - **20:48** — meng shao 引用 Cursor Lee Robinson 简历策略：简历提 AI、别用 AI 写求职信、初创vs大厂简历策略不同 [来源: AI情报局, shao__meng/Cursor]
+
+### 2026-05-11
+
+#### Agent 安全：Apple Reviewer Agent + 工具调用校验
+
+- **01:06** — omarsar0：Apple 提出 Reviewer Agent 在执行循环中校验每次工具调用，BFCL +5.5% / τ²-Bench +7.1%，推理模型 Reviewer 益害比 3:1，无需重训主 Agent。可落地：Hermes 工具调用链路可插入校验 Agent 层 [来源: AI情报局, omarsar0]
+- **13:18** — Chris/Codex：Codex 安全审计 bounty 中 Agent 自主判断不暴露付款细节，提示 Agent 安全边界应在 system prompt 层硬编码 [来源: AI情报局, Chris/Codex]
+
+#### 模型能力：腾讯 Hy3 + Grok Computer
+
+- **17:30** — 腾讯发布 Hy3 预览版：256K 上下文 + fast-and-slow-thinking fused MoE，重点测试 agentic 任务实际表现而非 benchmark。可落地：Agent 工具调用路由可用快思考通道、复杂多步推理用慢思考通道 [来源: AI情报局, 腾讯]
+- **17:30** — xAI 发布 Grok Computer：完整文件系统 + CLI 操作，跨文件重构/日志调试/自动测试迭代/Imagine 图片直接写入 FS。可落地：Hermes Agent 可参考 FS+CLI 一体化设计，减少 agent 与文件系统之间的中间层 [来源: AI情报局, xAI]
+
+#### 开发工具：Agent 自生成 README + 写作框架优先
+
+- **09:17** — Geek：Claude Code/Codex CLI skill 自动生成脱敏 AI 开发者 README，文档编写 agent 化。可落地：参考此模式为 Hermes 项目生成标准化脱敏 README [来源: AI情报局, Geek]
+- **17:30** — 李继刚：写作材料拆解——AI 讨论框架 3 小时/写稿 30 分钟/生成 HTML 5 分钟，思考框架占绝对大头。可落地：Agent 辅助写作 Skill 重心放"梳理思考框架"而非"格式化输出" [来源: AI情报局, 李继刚]
+
+#### 招聘信号：35 岁标准从年龄转向成长心态
+
+- **09:17** — Orange AI：35 岁招聘标准从"年龄"转向"是否相信成长空间 100 倍"，核心区分是心态而非出生年份。可落地：面试中主动展示正在构建的个人项目（如 Hermes 多 Agent 系统），用持续学习的行动证明"心态年轻" [来源: AI情报局, Orange AI]
