@@ -58,4 +58,19 @@
 
 ---
 
+---
+
+## 2026-05-17 追加：记忆系统
+
+### 记忆系统
+
+- **GaryMarcus/Hao Peng**：LLM Agent consolidated memory（压缩提炼后的记忆）可能比无记忆更差，episodic memory 保留原始片段更可靠。`[来源: AI情报局, GaryMarcus/Hao Peng 推文, 2026-05-17]`
+- **aiDotEngineer**：Mnemon 开源 Agent 持久记忆系统，支持跨会话状态保持/演化循环/编排/运行时连续性，新加坡数字部长已在个人 AI 栈中试用。`[来源: AI情报局, aiDotEngineer 推文, 2026-05-17]`
+
+**可落地**：
+- Agent 记忆层优先存储原始交互片段 + 按需向量检索，而非依赖 LLM 压缩提炼
+- Hermes 多 Agent 系统可参考 Mnemon 架构，将 bge-m3 向量检索 + bot-shared-knowledge 整合为可插拔 persistent cognition 层
+
+---
+
 *本周持续更新中...*
