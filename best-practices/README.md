@@ -90,6 +90,38 @@
 
 ---
 
+### 2026-03-19: Bot 记忆系统规范 v1.1
+
+---
+
+### 2026-05-26: Skill 审计五维标准
+**文件**: [2026-05-26-skill-audit-five-dimensions.md](./2026-05-26-skill-audit-five-dimensions.md)
+
+**核心内容**:
+- ✅ 格式约束、证据绑定、失败恢复、验证纪律、决策规则 5 个审计维度
+- ✅ 每维 1-5 分评分标准 + 最佳实践
+- ✅ 参考基线：otc-confirmation (24/25), autonomous-executor (22/25)
+
+**适用场景**:
+- 新 skill 审查 / 现有 skill 审计
+- 修复优先级排序（<15 = P0, 15-20 = P1）
+
+---
+
+### 2026-05-26: SkillOpt 设计原则落地方案
+**文件**: [2026-05-26-skillopt-lessons-governance.md](./2026-05-26-skillopt-lessons-governance.md)
+
+**核心内容**:
+- ✅ Validation Gate 显式化（修改核心规则需 ≥3 条独立证据）
+- ✅ Rejected-Edit Buffer 三级分级制（confirmed/rejected/provisional）
+- ✅ Bounded Update + Cooldown（同主题修改 7 天冷却期）
+
+**适用场景**:
+- 经验教训的生命周期管理
+- 防止单次错误直接污染核心规则
+
+---
+
 ### 2026-03-19: Bot 记忆系统规范 v1.1（2026-05-27 更新）
 **文件**: [2026-03-19-bot-memory-system-spec.md](2026-03-19-bot-memory-system-spec.md)
 
@@ -107,6 +139,7 @@
 
 ## 🔄 更新日志
 
+- 2026-05-27: 新增 SkillOpt 三件套、五维审计标准两块落地方案
 - 2026-05-27: Bot 记忆系统规范更新至 v1.1（Agent 承诺追踪闭环）
 - 2026-05-10: 新增 AI Agent 安全情报、Agent Verification 等
 - 2026-03-18: 新增 Claude Code Skills 8条沉淀原则
